@@ -2476,7 +2476,7 @@ $as_echo "${TAG}" >&6; }
 
 
 
-ac_config_files="$ac_config_files Makefile rpi-alpine-base/Makefile rpi-alpine-base-consul/Makefile rpi-alpine-consul/Makefile rpi-alpine-dnsmasq/Makefile rpi-alpine-hostapd/Makefile rpi-alpine-kivy/Makefile rpi-alpine-zabbix-agent/Makefile"
+ac_config_files="$ac_config_files Makefile rpi-alpine-base/Makefile rpi-alpine-base-consul/Makefile rpi-alpine-consul/Makefile rpi-alpine-dnsmasq/Makefile rpi-alpine-fabric/Makefile rpi-alpine-hostapd/Makefile rpi-alpine-kivy/Makefile rpi-alpine-zabbix-agent/Makefile"
 
 
 cat >confcache <<\_ACEOF
@@ -3205,6 +3205,7 @@ do
     "rpi-alpine-base-consul/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-base-consul/Makefile" ;;
     "rpi-alpine-consul/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-consul/Makefile" ;;
     "rpi-alpine-dnsmasq/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-dnsmasq/Makefile" ;;
+    "rpi-alpine-fabric/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-fabric/Makefile" ;;
     "rpi-alpine-hostapd/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-hostapd/Makefile" ;;
     "rpi-alpine-kivy/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-kivy/Makefile" ;;
     "rpi-alpine-zabbix-agent/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-zabbix-agent/Makefile" ;;
