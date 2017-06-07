@@ -40,6 +40,8 @@ AC_CONFIG_FILES([
     rpi-alpine-base/Makefile
     rpi-alpine-base-consul/Makefile
     rpi-alpine-build/Makefile
+    rpi-alpine-build-make/Makefile
+    rpi-alpine-build-python/Makefile
     rpi-alpine-consul/Makefile
     rpi-alpine-dnsmasq/Makefile
     rpi-alpine-fabric/Makefile
