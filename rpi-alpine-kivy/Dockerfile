@@ -7,6 +7,7 @@ COPY packages/*.apk /root/
 RUN apk add --update --allow-untrusted \
         py2-pip xclip \
         /root/*.apk && \
+    pip install kivy-garden && \
     rm -f /root/*.apk && \
     rm -rf /var/cache/apk/*
 
