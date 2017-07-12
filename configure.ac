@@ -47,6 +47,7 @@ AC_CONFIG_FILES([
     rpi-alpine-fabric/Makefile
     rpi-alpine-hostapd/Makefile
     rpi-alpine-kivy/Makefile
+    rpi-alpine-rng/Makefile
     rpi-alpine-zabbix-agent/Makefile
 ])
 
