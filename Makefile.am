@@ -9,4 +9,5 @@ SUBDIRS = \
     rpi-alpine-fabric \
     rpi-alpine-hostapd \
     rpi-alpine-kivy \
+    rpi-alpine-rng \
     rpi-alpine-zabbix-agent
