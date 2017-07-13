@@ -2476,7 +2476,7 @@ $as_echo "${TAG}" >&6; }
 
 
 
-ac_config_files="$ac_config_files Makefile rpi-alpine-base/Makefile rpi-alpine-base-consul/Makefile rpi-alpine-build/Makefile rpi-alpine-build-make/Makefile rpi-alpine-build-python/Makefile rpi-alpine-consul/Makefile rpi-alpine-dnsmasq/Makefile rpi-alpine-fabric/Makefile rpi-alpine-hostapd/Makefile rpi-alpine-kivy/Makefile rpi-alpine-zabbix-agent/Makefile"
+ac_config_files="$ac_config_files Makefile rpi-alpine-base/Makefile rpi-alpine-base-consul/Makefile rpi-alpine-build/Makefile rpi-alpine-build-make/Makefile rpi-alpine-build-python/Makefile rpi-alpine-consul/Makefile rpi-alpine-dnsmasq/Makefile rpi-alpine-fabric/Makefile rpi-alpine-hostapd/Makefile rpi-alpine-kivy/Makefile rpi-alpine-rng/Makefile rpi-alpine-zabbix-agent/Makefile"
 
 
 cat >confcache <<\_ACEOF
@@ -3211,6 +3211,7 @@ do
     "rpi-alpine-fabric/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-fabric/Makefile" ;;
     "rpi-alpine-hostapd/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-hostapd/Makefile" ;;
     "rpi-alpine-kivy/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-kivy/Makefile" ;;
+    "rpi-alpine-rng/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-rng/Makefile" ;;
     "rpi-alpine-zabbix-agent/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-zabbix-agent/Makefile" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
