@@ -13,8 +13,8 @@ ENV S6OVERLAY_VERSION=v1.20.0.0 \
 COPY packages/build/${BUILD_ARCH}/*.apk /root/
 RUN apk update && \
     apk upgrade && \
+    apk add bash bind-tools ca-certificates curl jq tar \
     apk add --allow-untrusted \
-        bash bind-tools ca-certificates curl jq tar \
         /root/*.apk && \
     curl -sSL https://github.com/just-containers/s6-overlay/releases/download/${S6OVERLAY_VERSION}/s6-overlay-armhf.tar.gz | tar xz -C / && \
     apk del tar && \
