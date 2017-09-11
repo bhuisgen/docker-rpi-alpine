@@ -3,11 +3,11 @@ IMAGE = bhuisgen/rpi-alpine-build
 clean-local:
 	docker rmi $(CLEAN_OPTIONS) $(IMAGE):$(TAG) || true
 
-build-local:
+build:
 	docker build $(BUILD_OPTIONS) -t $(IMAGE):$(TAG) .
 
-pull-local:
+pull:
 	docker pull $(PULL_OPTIONS) $(IMAGE):$(TAG)
 
-push-local: build-local
+push: build
 	docker push $(PUSH_OPTIONS) $(IMAGE):$(TAG)
