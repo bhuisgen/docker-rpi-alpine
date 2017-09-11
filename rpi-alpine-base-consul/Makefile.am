@@ -1,10 +1,13 @@
 IMAGE = bhuisgen/rpi-alpine-base-consul
 
 clean-local:
-	docker rmi $(IMAGE):$(TAG) $(CLEAN_OPTIONS) || true
+	docker rmi $(CLEAN_OPTIONS) $(IMAGE):$(TAG) || true
 
 build-local:
-	docker build -t $(IMAGE):$(TAG) $(BUILD_OPTIONS) .
+	docker build $(BUILD_OPTIONS) -t $(IMAGE):$(TAG) .
 
 pull-local:
-	docker pull $(IMAGE):$(TAG) $(PULL_OPTIONS)
+	docker pull $(PULL_OPTIONS) $(IMAGE):$(TAG)
+
+push-local: build-local
+	docker push $(PUSH_OPTIONS) $(IMAGE):$(TAG)

@@ -152,6 +152,7 @@ PACKAGE_URL = @PACKAGE_URL@
 PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_SEPARATOR = @PATH_SEPARATOR@
 PULL_OPTIONS = @PULL_OPTIONS@
+PUSH_OPTIONS = @PUSH_OPTIONS@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
@@ -395,13 +396,16 @@ uninstall-am:
 
 
 clean-local:
-	docker rmi $(IMAGE):$(TAG) $(CLEAN_OPTIONS) || true
+	docker rmi $(CLEAN_OPTIONS) $(IMAGE):$(TAG) || true
 
 build-local:
-	docker build -t $(IMAGE):$(TAG) $(BUILD_OPTIONS) .
+	docker build $(BUILD_OPTIONS) -t $(IMAGE):$(TAG) .
 
 pull-local:
-	docker pull $(IMAGE):$(TAG) $(PULL_OPTIONS)
+	docker pull $(PULL_OPTIONS) $(IMAGE):$(TAG)
+
+push-local: build-local
+	docker push $(PUSH_OPTIONS) $(IMAGE):$(TAG)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

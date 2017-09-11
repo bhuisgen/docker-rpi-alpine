@@ -34,6 +34,7 @@ AC_MSG_RESULT([${TAG}])
 AC_ARG_VAR(CLEAN_OPTIONS, clean options)
 AC_ARG_VAR(BUILD_OPTIONS, build options)
 AC_ARG_VAR(PULL_OPTIONS, pull options)
+AC_ARG_VAR(PUSH_OPTIONS, push options)
 
 AC_CONFIG_FILES([
     Makefile
