@@ -586,6 +586,7 @@ PACKAGE_URL=''
 
 ac_subst_vars='LTLIBOBJS
 LIBOBJS
+PUSH_OPTIONS
 PULL_OPTIONS
 BUILD_OPTIONS
 CLEAN_OPTIONS
@@ -672,7 +673,8 @@ target_alias
 TAG
 CLEAN_OPTIONS
 BUILD_OPTIONS
-PULL_OPTIONS'
+PULL_OPTIONS
+PUSH_OPTIONS'
 
 
 # Initialize some variables set by options.
@@ -1313,6 +1315,8 @@ Some influential environment variables:
               build options
   PULL_OPTIONS
               pull options
+  PUSH_OPTIONS
+              push options
 
 Use these variables to override the choices made by `configure' or to help
 it to find libraries and programs with nonstandard names/locations.
@@ -2471,6 +2475,7 @@ if test "x${TAG}" = "x"; then
 fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: ${TAG}" >&5
 $as_echo "${TAG}" >&6; }
+
 
 
 
