@@ -5,7 +5,7 @@ AC_PREREQ([2.69])
 AC_INIT([docker-rpi-alpine], [0.1], [bhuisgen@hbis.fr])
 AM_INIT_AUTOMAKE([foreign])
 AM_MAINTAINER_MODE
-AM_EXTRA_RECURSIVE_TARGETS([build pull])
+AM_EXTRA_RECURSIVE_TARGETS([build pull push])
 
 # Checks for programs.
 AC_PROG_INSTALL
@@ -34,6 +34,7 @@ AC_MSG_RESULT([${TAG}])
 AC_ARG_VAR(CLEAN_OPTIONS, clean options)
 AC_ARG_VAR(BUILD_OPTIONS, build options)
 AC_ARG_VAR(PULL_OPTIONS, pull options)
+AC_ARG_VAR(PUSH_OPTIONS, push options)
 
 AC_CONFIG_FILES([
     Makefile
