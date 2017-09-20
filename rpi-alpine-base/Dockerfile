@@ -1,4 +1,4 @@
-FROM armhf/alpine:3.6
+FROM arm32v6/alpine:3.6
 MAINTAINER Boris HUISGEN <bhuisgen@hbis.fr>
 
 ARG BUILD_ARCH=x86_64
