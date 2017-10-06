@@ -1,5 +1,5 @@
 FROM arm32v6/alpine:3.6
-MAINTAINER Boris HUISGEN <bhuisgen@hbis.fr>
+LABEL maintainer="Boris HUISGEN <bhuisgen@hbis.fr>"
 
 ARG BUILD_ARCH=x86_64
 
