@@ -1,5 +1,5 @@
 FROM bhuisgen/rpi-alpine-base:latest
-MAINTAINER Boris HUISGEN <bhuisgen@hbis.fr>
+LABEL maintainer="Boris HUISGEN <bhuisgen@hbis.fr>"
 
 RUN apk add --update rng-tools && \
     rm -rf /var/cache/apk/*
