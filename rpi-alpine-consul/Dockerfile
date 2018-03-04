@@ -2,7 +2,7 @@ FROM bhuisgen/rpi-alpine-base:latest
 LABEL maintainer="Boris HUISGEN <bhuisgen@hbis.fr>"
 
 ENV CONSUL_VERSION=0.9.3 \
-    CONSULTEMPLATE_VERSION=0.19.3
+    CONSULTEMPLATE_VERSION=0.19.4
 
 RUN mkdir -p /var/lib/consul && \
     addgroup -g 500 -S consul && \
@@ -10,7 +10,7 @@ RUN mkdir -p /var/lib/consul && \
     chown -R consul:consul /var/lib/consul
 
 RUN apk add --update zip && \
-    curl -sSL https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_linux_arm.zip -o /tmp/consul.zip && \
+    curl -sSL https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_linux_amd64.zip -o /tmp/consul.zip && \
     unzip /tmp/consul.zip -d /bin && \
     rm /tmp/consul.zip && \
     curl -sSL https://releases.hashicorp.com/consul-template/${CONSULTEMPLATE_VERSION}/consul-template_${CONSULTEMPLATE_VERSION}_linux_arm.zip -o /tmp/consul-template.zip && \
