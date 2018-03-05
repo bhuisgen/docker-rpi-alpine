@@ -4,10 +4,10 @@ LABEL maintainer="Boris HUISGEN <bhuisgen@hbis.fr>"
 ENV CONSUL_VERSION=0.9.3 \
     CONSULTEMPLATE_VERSION=0.19.4
 
-RUN mkdir -p /var/lib/consul && \
+RUN mkdir /var/lib/consul && \
     addgroup -g 500 -S consul && \
     adduser -u 500 -S -D -g "" -G consul -s /sbin/nologin -h /var/lib/consul consul && \
-    chown -R consul:consul /var/lib/consul
+    chown consul:consul /var/lib/consul
 
 RUN apk add --update zip && \
     curl -sSL https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_linux_amd64.zip -o /tmp/consul.zip && \
