@@ -16,7 +16,8 @@ RUN apk update && \
     apk add bash bind-tools ca-certificates curl jq tar && \
     apk add --allow-untrusted \
         /root/*.apk && \
-    curl -sSL https://github.com/just-containers/s6-overlay/releases/download/v${S6OVERLAY_VERSION}/s6-overlay-armhf.tar.gz | tar xz -C / && \
+    curl -sSL https://github.com/just-containers/s6-overlay/releases/download/v${S6OVERLAY_VERSION}/s6-overlay-armhf.tar.gz | \
+        tar xz -C / && \
     apk del tar && \
     rm -f /root/*.apk && \
     rm -rf /var/cache/apk/*
