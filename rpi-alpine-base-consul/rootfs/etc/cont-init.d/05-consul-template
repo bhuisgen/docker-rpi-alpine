@@ -1,19 +1,13 @@
 #!/usr/bin/with-contenv sh
 
-if [ -z "$CONSULTEMPLATE_CONTAINER" ]; then
-    export CONSULTEMPLATE_CONTAINER=1
-    printf "%s" "${CONSULTEMPLATE_CONTAINER}" > /var/run/s6/container_environment/CONSULTEMPLATE_CONTAINER
-fi
+if ls -A /etc/consul-template/conf.d/*.hcl > /dev/null 2>&1; then
+    echo "==> Configuring container"
 
-if [ -z "$CONSULTEMPLATE_SERVICES" ]; then
-    export CONSULTEMPLATE_SERVICES=1
-    printf "%s" "${CONSULTEMPLATE_SERVICES}" > /var/run/s6/container_environment/CONSULTEMPLATE_SERVICES
-fi
+    options="-config /etc/consul-template/conf.d/ -once"
 
-if [ ! -z "${CONSUL_AGENT}" ] && [ "${CONSULTEMPLATE_CONTAINER}" -eq 1 ]; then
-    echo "==> Creating container configuration"
-
-    options="-config /etc/consul-template/conf-cont.d -once -consul-addr ${CONSUL_AGENT}:${CONSUL_PORT}"
+    if [ ! -z "${CONSUL_AGENT}" ] && [ ! -z "${CONSUL_PORT}" ]; then
+        options="${options} -consul-addr ${CONSUL_AGENT}:${CONSUL_PORT}"
+    fi
 
     if [ ! -z "${CONSUL_TLS}" ] && [ "${CONSUL_TLS}" -eq 1 ]; then
         options="${options} -consul-ssl"
@@ -43,15 +37,12 @@ if [ ! -z "${CONSUL_AGENT}" ] && [ "${CONSULTEMPLATE_CONTAINER}" -eq 1 ]; then
         options="${options} -consul-token ${CONSUL_TOKEN}"
     fi
 
-    options="${options} -kill-signal SIGTERM"
-
     if [ ! -z "${CONSULTEMPLATE_OPTIONS}" ]; then
         options="${options} ${CONSULTEMPLATE_OPTIONS}"
     fi
 
-    consul-template ${options}
-    if [ $? -ne 0 ]; then
-        echo "Failed to render templates, aborting" >&2
+    if ! consul-template ${options}; then
+            echo "Failed to render container templates, aborting" >&2
         exit 1
     fi
 fi
