@@ -45,8 +45,8 @@ AC_CONFIG_FILES([
     rpi-alpine-build-python/Makefile
     rpi-alpine-consul/Makefile
     rpi-alpine-dnsmasq/Makefile
-    rpi-alpine-fabric/Makefile
     rpi-alpine-hostapd/Makefile
+    rpi-alpine-jenkins-slave/Makefile
     rpi-alpine-kivy/Makefile
     rpi-alpine-rng/Makefile
     rpi-alpine-zabbix-agent/Makefile

@@ -1,5 +1,5 @@
 FROM bhuisgen/rpi-alpine-base-consul:latest
-MAINTAINER Boris HUISGEN <bhuisgen@hbis.fr>
+LABEL maintainer="Boris HUISGEN <bhuisgen@hbis.fr>"
 
 ENV LD_LIBRARY_PATH=/opt/vc/lib
 
