@@ -9,5 +9,7 @@ SUBDIRS = \
     rpi-alpine-hostapd \
     rpi-alpine-jenkins-slave \
     rpi-alpine-kivy \
+    rpi-alpine-nginx \
     rpi-alpine-rng \
-    rpi-alpine-zabbix-agent
+    rpi-alpine-zabbix-agent \
+    rpi-alpine-zabbix-monitor

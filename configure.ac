@@ -48,8 +48,10 @@ AC_CONFIG_FILES([
     rpi-alpine-hostapd/Makefile
     rpi-alpine-jenkins-slave/Makefile
     rpi-alpine-kivy/Makefile
+    rpi-alpine-nginx/Makefile
     rpi-alpine-rng/Makefile
     rpi-alpine-zabbix-agent/Makefile
+    rpi-alpine-zabbix-monitor/Makefile
 ])
 
 AC_OUTPUT

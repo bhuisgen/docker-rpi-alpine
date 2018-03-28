@@ -2481,7 +2481,7 @@ $as_echo "${TAG}" >&6; }
 
 
 
-ac_config_files="$ac_config_files Makefile rpi-alpine-base/Makefile rpi-alpine-base-consul/Makefile rpi-alpine-build/Makefile rpi-alpine-build-make/Makefile rpi-alpine-build-python/Makefile rpi-alpine-consul/Makefile rpi-alpine-dnsmasq/Makefile rpi-alpine-hostapd/Makefile rpi-alpine-jenkins-slave/Makefile rpi-alpine-kivy/Makefile rpi-alpine-rng/Makefile rpi-alpine-zabbix-agent/Makefile"
+ac_config_files="$ac_config_files Makefile rpi-alpine-base/Makefile rpi-alpine-base-consul/Makefile rpi-alpine-build/Makefile rpi-alpine-build-make/Makefile rpi-alpine-build-python/Makefile rpi-alpine-consul/Makefile rpi-alpine-dnsmasq/Makefile rpi-alpine-hostapd/Makefile rpi-alpine-jenkins-slave/Makefile rpi-alpine-kivy/Makefile rpi-alpine-nginx/Makefile rpi-alpine-rng/Makefile rpi-alpine-zabbix-agent/Makefile rpi-alpine-zabbix-monitor/Makefile"
 
 
 cat >confcache <<\_ACEOF
@@ -3216,8 +3216,10 @@ do
     "rpi-alpine-hostapd/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-hostapd/Makefile" ;;
     "rpi-alpine-jenkins-slave/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-jenkins-slave/Makefile" ;;
     "rpi-alpine-kivy/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-kivy/Makefile" ;;
+    "rpi-alpine-nginx/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-nginx/Makefile" ;;
     "rpi-alpine-rng/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-rng/Makefile" ;;
     "rpi-alpine-zabbix-agent/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-zabbix-agent/Makefile" ;;
+    "rpi-alpine-zabbix-monitor/Makefile") CONFIG_FILES="$CONFIG_FILES rpi-alpine-zabbix-monitor/Makefile" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
   esac
