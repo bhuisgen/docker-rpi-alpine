@@ -3,7 +3,7 @@ LABEL maintainer="Boris HUISGEN <bhuisgen@hbis.fr>"
 
 ARG BUILD_ARCH=x86_64
 
-ENV S6OVERLAY_VERSION=1.21.2.2 \
+ENV S6OVERLAY_VERSION=1.21.4.0 \
     S6_BEHAVIOUR_IF_STAGE2_FAILS=1
 
 COPY packages/build/${BUILD_ARCH}/*.apk /root/
